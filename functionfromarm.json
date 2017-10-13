@@ -1,0 +1,26 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+    },
+    "resources": [ 
+        { 
+            "apiVersion": "2015-01-01", 
+            "name": "GetCIDR", 
+            "type": "Microsoft.Resources/deployments", 
+            "properties": { 
+              "mode": "incremental", 
+              "templateLink": {
+                "uri": "https://armtest.azurewebsites.net/api/HttpTriggerCSharp1?network=mynetwork&subnetdivisor=subnetdiv&subnetindex=subnetindex&code=i5CkmWRC1gKhkV6mLLNPBEYOnyFO3ToTe2LBEbC7KCdMg6mdfriTcg==",
+                "contentVersion": "1.0.0.0"
+              }
+            } 
+        } 
+      ],
+    "outputs": {
+        "result": {
+            "type": "string",
+            "value": "[reference('GetCIDR').outputs.addrPrefix.value]"
+          }
+    }
+}
