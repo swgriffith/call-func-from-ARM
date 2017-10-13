@@ -11,7 +11,7 @@
             "properties": { 
               "mode": "incremental", 
               "templateLink": {
-                "uri": "https://armtest.azurewebsites.net/api/HttpTriggerCSharp1?network=mynetwork&subnetdivisor=subnetdiv&subnetindex=subnetindex&code=i5CkmWRC1gKhkV6mLLNPBEYOnyFO3ToTe2LBEbC7KCdMg6mdfriTcg==",
+                "uri": "<FunctionURL>",
                 "contentVersion": "1.0.0.0"
               }
             } 

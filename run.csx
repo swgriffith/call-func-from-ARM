@@ -24,7 +24,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
    ""outputs"": {[OUTPUTS]} 
    }"; 
 
-   var addrPrefixMsg = @"""addrPrefix" + @""": { ""type"": ""string"", ""value"": """ + "100.110.60.0/25" + @""" }";
+   var addrPrefixMsg = @"""addrPrefix" + @""": { ""type"": ""string"", ""value"": """ + "<WhateverReturnValue>" + @""" }";
    //var addrPrefixMsg = "test";
 
     var result = template.Replace("[OUTPUTS]", addrPrefixMsg);
